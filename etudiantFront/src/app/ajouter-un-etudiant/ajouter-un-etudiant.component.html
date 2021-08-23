@@ -1,0 +1,43 @@
+<div class="container">
+    <div>
+        <h2>Ajouter un Etudiant :</h2>
+    </div>
+    <form>
+        <div hidden class="col-sm-2 col-md-2 col-lg-2">
+            <label>ID</label>
+            <input  type="text" [(ngModel)]="newEtudiant.id" name="id" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Nom </label>
+            <input type="text" [(ngModel)]="newEtudiant.nom" name="nom" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Prenom</label>
+            <input type="text" [(ngModel)]="newEtudiant.prenom" name="prenom" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Cin</label>
+            <input type="number" [(ngModel)]="newEtudiant.cin" name="cin" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Ddn</label>
+            <input type="text" [(ngModel)]="newEtudiant.ddn" name="ddn" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Mail</label>
+            <input type="text" [(ngModel)]="newEtudiant.mail" name="mail" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Phone</label>
+            <input type="text" [(ngModel)]="newEtudiant.phone" name="phone" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Classe</label>
+            <input type="text" [(ngModel)]="newEtudiant.classe" name="classe" class="form-control">
+        </div>
+        <div class="mt-2">
+            <button type="submit" (click)="AjouterUnEtudiant()" class="btn btn-success">Ajouter</button>
+        </div>
+    </form>
+</div>
+

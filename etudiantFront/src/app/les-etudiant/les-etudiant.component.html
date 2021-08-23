@@ -1,0 +1,45 @@
+<br>
+<div class="container">
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="firstName(search)" [(ngModel)]="firstName"
+            (ngModelChange)="search()" />
+        <input type="text" class="form-control" placeholder="lastName(search)" [(ngModel)]="lastName"
+            (ngModelChange)="search()" />
+        <input type="text" class="form-control" placeholder="cin(search)" [(ngModel)]="cin"
+            (ngModelChange)="search()" />
+    </div>
+</div>
+<br>
+<div class="container">
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <table class="table table-striped">
+                <tr>
+                    <th>Id</th>
+                    <th>Nom</th>
+                    <th>Prenom</th>
+                    <th>Cin</th>
+                    <th>Ddn</th>
+                    <th>Mail</th>
+                    <th>Phone</th>
+                    <th>Classe</th>
+                    <th></th>
+                </tr>
+                <tbody *ngFor="let e of etudiant">
+                    <tr>
+                        <td>{{e.id}}</td>
+                        <td>{{e.nom}}</td>
+                        <td>{{e.prenom}}</td>
+                        <td>{{e.cin}}</td>
+                        <td>{{e.ddn}}</td>
+                        <td>{{e.mail}}</td>
+                        <td>{{e.phone}}</td>
+                        <td>{{e.classe}}</td>
+                        <td><a class="btn btn-danger" (click)="SupprimerUnEtudiant(e)" >Supprimer</a></td>
+                        <td><a class="btn btn-success" [routerLink]="['/modifierEtudiant',e.id]">Modifier</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
